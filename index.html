@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/flatly/bootstrap.min.css"
+    />
+
+    <style>
+      .main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-group mb-5 mt-5">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search"
+          search-bar
+        />
+      </div>
+    </div>
+
+    <div class="main container" data-container></div>
+
+    <template card-template>
+      <div class="card">
+        <div class="card-body">
+          <p><strong>Name:</strong><br /></p>
+          <p card-name>John Doe</p>
+
+          <p><strong>Email:</strong><br /></p>
+          <p card-email>j.Doe321@gmail.com</p>
+        </div>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
