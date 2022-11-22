@@ -12,6 +12,9 @@
   // Getting Card Template
   let cardTemplate = document.querySelector("template").content;
 
+  // Populating Users On Load
+  window.onload = populateUsers();
+
   // Filtering Users
   searchBar.addEventListener("input", filterUsers);
 
@@ -22,13 +25,13 @@
   function filterUsers() {
     let searchTerm = searchBar.value.toLowerCase();
 
-    let filteredData = data.users.filter((user) =>
+    let filteredUsers = data.users.filter((user) =>
       user.firstName.toLowerCase().includes(searchTerm)
     );
 
     console.log(searchTerm);
 
-    return filteredData;
+    return filteredUsers;
   }
 
   // User Populator
